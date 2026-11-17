@@ -1,0 +1,37 @@
+name: 오늘의 만나 백업 갱신
+on:
+  workflow_dispatch:
+  schedule:
+    # UTC. KST 03:03/03:33부터 하루 여러 번, 서버의 정기 수집과 독립 실행.
+    - cron: '3,33 0,3,6,9,12,14,18,21 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: daily-manna-backup
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: true
+      - name: 날짜·본문 보존 회귀 검사
+        run: python3 -m unittest discover -s tests -v
+      - name: 공식 소스 날짜 확인 후 수집
+        env:
+          JBCH_USER_ID: ${{ secrets.JBCH_USER_ID }}
+          JBCH_PASSWORD: ${{ secrets.JBCH_PASSWORD }}
+        run: python3 scripts/collect_manna.py
+      - name: 검증된 본문과 메타데이터만 반영
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add process_result.json manna_metadata.json
+          if git diff --cached --quiet; then
+            printf '%s\n' '검증된 기존 백업과 같아 커밋을 생략합니다.'
+            exit 0
+          fi
+          git commit -m '오늘의 만나 검증 백업 갱신'
+          git push origin HEAD:main
