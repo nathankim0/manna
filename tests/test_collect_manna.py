@@ -48,6 +48,9 @@ class CollectorTest(unittest.TestCase):
             self.assertEqual(metadata['sha256'], c.hashlib.sha256((root / 'process_result.json').read_bytes()).hexdigest())
             self.assertEqual(metadata['dateKey'], '2026-11-17')
             self.assertFalse(c.write_backup(root, '2026-11-17', '히 12:11', verses, now))
+            later = now + dt.timedelta(hours=3)
+            self.assertTrue(c.write_backup(root, '2026-11-17', '히 12:11', verses, later))
+            self.assertEqual(json.loads((root / 'manna_metadata.json').read_text())['fetchedAt'], later.isoformat().replace('+00:00', 'Z'))
             self.assertTrue(c.write_backup(root, '2026-11-18', '히 12:11', verses, now))
             self.assertEqual(json.loads((root / 'manna_metadata.json').read_text())['dateKey'], '2026-11-18')
 

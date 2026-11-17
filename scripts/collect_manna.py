@@ -169,6 +169,7 @@ def write_backup(directory, date_key, subject, verses, now):
         previous = json.loads(path.read_text())
         if (previous.get('dateKey') == date_key and previous.get('sha256') == digest
                 and previous.get('referenceText') == subject
+                and previous.get('fetchedAt') == now.isoformat().replace('+00:00', 'Z')
                 and (directory / 'process_result.json').read_bytes() == payload):
             return False
     metadata = {
