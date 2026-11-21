@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "dateKey": "2026-11-21",
-  "referenceText": "약 3:13-18",
-  "verseCount": 6,
+  "dateKey": "2026-11-22",
+  "referenceText": "약 4:8-17",
+  "verseCount": 10,
   "source": "jbch",
-  "fetchedAt": "2026-11-21T10:52:36.725393Z",
-  "sha256": "baa02a0a217fa292aaf0860fc6b9b8214246babe555609da036e3e5a3917b18d"
+  "fetchedAt": "2026-11-21T19:03:58.183132Z",
+  "sha256": "3e85d4107a52e586fde35ad29a2a1e43bf8bfe5c192887a6b7eef4cc57c7e974"
 }
