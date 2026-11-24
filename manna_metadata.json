@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "dateKey": "2026-11-23",
-  "referenceText": "약 5:7-18",
-  "verseCount": 12,
+  "dateKey": "2026-11-24",
+  "referenceText": "벧전 1:13-22",
+  "verseCount": 10,
   "source": "jbch",
-  "fetchedAt": "2026-11-23T12:12:31.202847Z",
-  "sha256": "06f9c21c071fa57e1d3cc6490dcf4ca5c8ec59c162ce547b0df11674231fcd87"
+  "fetchedAt": "2026-11-24T00:16:08.125116Z",
+  "sha256": "0dd1aed9e8a454fd8a0304fb1e49f00787cfb4fad3f0d8ad11324b78f82bd561"
 }
