@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "dateKey": "2026-11-25",
-  "referenceText": "벧전 2:11-17",
-  "verseCount": 7,
+  "dateKey": "2026-11-26",
+  "referenceText": "벧전 3:13-22",
+  "verseCount": 10,
   "source": "jbch",
-  "fetchedAt": "2026-11-25T08:14:46.326906Z",
-  "sha256": "c5e6b8e8e4f3814249d4175a3eed868ace7ff9bc4bacbc3f9d1f2630e43feb6e"
+  "fetchedAt": "2026-11-25T19:07:09.647882Z",
+  "sha256": "ccb8891d5bb7399548f94c86037f9678637c7ae9ba25a383940b57c8d3bcde1b"
 }
