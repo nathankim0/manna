@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "dateKey": "2026-11-27",
-  "referenceText": "벧전 4:1-11",
-  "verseCount": 11,
+  "dateKey": "2026-11-28",
+  "referenceText": "벧전 5:2-11",
+  "verseCount": 10,
   "source": "jbch",
-  "fetchedAt": "2026-11-27T08:04:49.935951Z",
-  "sha256": "b35a6f28836c492da4589d21f8f0dfa3ecafd362b63bcf64384df162a172dbda"
+  "fetchedAt": "2026-11-27T18:50:10.658446Z",
+  "sha256": "402823bfa43d7fde07fe61ce4474e7899330577d3777176b608d584d5c685a57"
 }
